@@ -1,0 +1,1 @@
+SELECT m.name,p.status,m.time_create as time_create, p.time_create as time_update FROM murid m JOIN (SELECT DISTINCT pp.id,pp.id_murid,pp.status,pp.time_create  FROM pendidikan pp ORDER BY pp.time_create) p on p.id_murid = m.id GROUP BY m.id;
